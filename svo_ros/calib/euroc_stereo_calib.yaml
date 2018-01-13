@@ -6,7 +6,7 @@ cameras:
     id: 54812562fa109c40fe90b29a59dd7798
     line-delay-nanoseconds: 0
     image_height: 480
-    image_width: 752
+    image_width: 640
     type: pinhole
     intrinsics:
       cols: 1
@@ -31,7 +31,7 @@ cameras:
     id: 54812562fa109c40fe90b29a59dd7723
     line-delay-nanoseconds: 0
     image_height: 480
-    image_width: 752
+    image_width: 640
     type: pinhole
 
     intrinsics:

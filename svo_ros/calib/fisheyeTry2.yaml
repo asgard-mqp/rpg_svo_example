@@ -1,0 +1,50 @@
+label: "fisheye"
+id: 5
+cameras:
+- camera:
+    label: cam0
+    id: 0
+    line-delay-nanoseconds: 0
+    image_height: 480
+    image_width: 640
+    type: omni
+    mask: rightmask.png
+    intrinsics:
+      cols: 1
+      rows: 24
+      data: [-273.0178, 0.0, 0.001307588, 9.511213e-08, 3.444664e-09, 321.700136,238.253645, 1.0, 0.0, 0.0, 383.956718, 210.250814, 7.336129, 42.723302, 28.249275,38.943682, 43.832648, 21.159411, 3.644094, 0.0, 0.0, 0.0, 0.0, 0.0]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 0
+        data: []
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
+- camera:
+    label: cam1
+    id: 1
+    line-delay-nanoseconds: 0
+    image_height: 480
+    image_width: 640
+    type: omni
+    mask: leftmask.png
+    intrinsics:
+      cols: 1
+      rows: 24
+      data: [-273.0178, 0.0, 0.001307588, 9.511213e-08, 3.444664e-09, 321.700136,238.253645, 1.0, 0.0, 0.0, 383.956718, 210.250814, 7.336129, 42.723302, 28.249275,38.943682, 43.832648, 21.159411, 3.644094, 0.0, 0.0, 0.0, 0.0, 0.0]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 0
+        data: []
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [0.0125552670891, -0.999755099723, 0.0182237714554, -0.0198435579556,
+           0.999598781151, 0.0130119051815, 0.0251588363115, 0.0453689425024,
+          -0.0253898008918, 0.0179005838253, 0.999517347078, 0.00786212447038,
+           0.0, 0.0, 0.0, 1.0]

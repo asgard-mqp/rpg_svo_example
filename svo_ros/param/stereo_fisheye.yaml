@@ -1,0 +1,69 @@
+pipeline_is_stereo: True
+
+grid_size: 35
+use_async_reprojectors: True
+use_imu: False
+poseoptim_prior_lambda: 0.0
+img_align_prior_lambda_rot: 0.0
+img_align_prior_lambda_trans: 0.0
+
+# If set to false, we process the next frame(s) only when the depth update is finished
+use_threaded_depthfilter: False
+# if the number of features are below this number, consider as failure
+quality_min_fts: 5
+# if the number of features reduce by this number for consecutive frames, consider as failure
+quality_max_drop_fts: 80
+
+max_depth_inv: 0.1
+min_depth_inv: 10.0
+mean_depth_inv: 0.5
+
+map_scale: 5.0
+kfselect_criterion: FORWARD
+kfselect_numkfs_upper_thresh: 180
+kfselect_numkfs_lower_thresh: 90
+kfselect_min_dist_metric: 0.001
+kfselect_min_angle: 6
+kfselect_min_disparity: 40
+kfselect_min_num_frames_between_kfs: 0
+
+img_align_est_illumination_gain: true
+img_align_est_illumination_offset: true
+depth_filter_affine_est_offset: true
+depth_filter_affine_est_gain: true
+reprojector_affine_est_offset: true
+reprojector_affine_est_gain: true
+
+#from me
+init_min_features: 25
+
+
+#from fisheye
+
+max_fts: 180
+grid_size: 25
+map_scale: 5
+
+kfselect_criterion: FORWARD
+kfselect_numkfs_upper_thresh: 120
+kfselect_numkfs_lower_thresh: 40
+kfselect_min_dist_metric: 0.2
+kfselect_min_angle: 10
+kfselect_min_disparity: 25
+update_seeds_with_old_keyframes: True
+
+T_world_imuinit/qx: 1
+T_world_imuinit/qy: 0
+T_world_imuinit/qz: 0
+T_world_imuinit/qw: 0
+
+publish_every_nth_dense_input: 5
+publish_marker_scale: 0.8
+
+# fisheye specific
+# the distortion of fisheye is not negligible,
+# therefore the jacobian need to be considered
+img_align_use_distortion_jacobian: True
+# pose optimization and epipolar search should be done on unit sphere
+poseoptim_using_unit_sphere: True
+scan_epi_unit_sphere: True
